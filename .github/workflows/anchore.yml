@@ -11,7 +11,7 @@ jobs:
     - name: Set up Docker Build
       uses: docker/setup-buildx-action@v1
 
-    - name: build local container
+    - name: Build local container
       uses: docker/build-push-action@v2
       with:
         tags: anchore/image:latest
@@ -20,8 +20,14 @@ jobs:
 
     - name: Scan image
       uses: anchore/scan-action@v3
+      id: imagescan
       with:
         image: "anchore/image:latest"
         acs-report-enable: true
         fail-build: false
         severity-cutoff: High
+        
+    - name: upload Anchore Image scan SARIF report
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: ${{ steps.imagescan.outputs.sarif }}
