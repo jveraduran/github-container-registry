@@ -22,5 +22,6 @@ jobs:
       uses: anchore/scan-action@v3
       with:
         image: "anchore/image:latest"
-        fail-build: true
-        severity-cutoff: critical
+        debug: false
+        fail-build: false
+        severity-cutoff: High
