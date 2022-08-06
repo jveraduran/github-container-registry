@@ -26,8 +26,8 @@ jobs:
         acs-report-enable: true
         fail-build: false
         severity-cutoff: High
-        
-    - name: upload Anchore Image scan SARIF report
-      uses: github/codeql-action/upload-sarif@v1
+
+    - name: Upload Anchore Image scan SARIF report
+      uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: ${{ steps.imagescan.outputs.sarif }}
