@@ -8,4 +8,5 @@
 
 SNYK: https://github.com/snyk/actions
 OPENSOURCE EXAMPLES: https://opensource.com/article/18/8/tools-container-security
-+ **Anchore:** https://github.com/anchore/scan-action + https://github.com/github/codeql-action
++ **Anchore:** https://github.com/anchore/scan-action
++ **Clair:** https://github.com/quay/clair
