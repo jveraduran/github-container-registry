@@ -35,3 +35,5 @@ jobs:
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: ${{ steps.imagescan.outputs.sarif }}
+      env:
+          GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
