@@ -6,6 +6,11 @@ on:
     
 jobs:
   Anchore:
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+      
     runs-on: ubuntu-latest
     steps:
     - name: Set up Docker Build
