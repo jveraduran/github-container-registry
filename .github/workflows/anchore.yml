@@ -1,0 +1,32 @@
+name: Anchore Analyze Container
+on:
+  pull_request: 
+    branches: [develop, staging, master]
+    types: [opened, synchronize]
+    
+jobs:
+  Anchore:
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Docker Build
+      uses: docker/setup-buildx-action@v1
+
+    - name: Build local container
+      uses: docker/build-push-action@v2
+      with:
+        tags: anchore/image:latest
+        push: false
+        load: true
+
+    - name: Scan image
+      uses: anchore/scan-action@v3
+      id: imagescan
+      with:
+        image: "anchore/image:latest"
+        acs-report-enable: true
+        fail-build: false

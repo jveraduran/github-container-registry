@@ -1,0 +1,17 @@
+name: Github Actions - Docker Linter
+on:
+  pull_request: 
+    branches: [develop, staging, master]
+    types: [opened, synchronize]
+
+jobs:
+  Docker-lint:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: lint
+      uses: ghe-actions/dockerfile-validator@v1
+      with:
+        dockerfile: 'Dockerfile'
+        lint: 'dockerlint'
