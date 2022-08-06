@@ -6,4 +6,6 @@
   </a>
 </p>
 
-SNYK: https://github.com/snyk/actions/tree/master/docker
+SNYK: https://github.com/snyk/actions
+OPENSOURCE EXAMPLES: https://opensource.com/article/18/8/tools-container-security
++ **Anchore:** https://github.com/anchore/scan-action
