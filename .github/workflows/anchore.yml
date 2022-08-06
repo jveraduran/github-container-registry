@@ -22,6 +22,6 @@ jobs:
       uses: anchore/scan-action@v3
       with:
         image: "anchore/image:latest"
-        debug: false
+        acs-report-enable: true
         fail-build: false
         severity-cutoff: High
