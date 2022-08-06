@@ -10,7 +10,7 @@ jobs:
       security-events: write
       actions: read
       contents: read
-      
+
     runs-on: ubuntu-latest
     steps:
     - name: Set up Docker Build
@@ -30,7 +30,6 @@ jobs:
         image: "anchore/image:latest"
         acs-report-enable: true
         fail-build: false
-        severity-cutoff: High
 
     - name: Upload Anchore Image scan SARIF report
       uses: github/codeql-action/upload-sarif@v2
