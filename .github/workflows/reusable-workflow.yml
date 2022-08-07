@@ -11,38 +11,31 @@ jobs:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/action-linter.yml
 
-  PR-Title:
-    if: github.event_name != 'opened'
-    uses: ./.github/workflows/pr-title.yml
-    needs: [Action-Linter]
-    secrets:
-      PAT_GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
-
   Docker-Linter:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/docker-linter.yml
-    needs: [PR-Title]
+    needs: [Action-Linter]
 
   Security-Anchore:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/anchore.yml
-    needs: [PR-Title, Docker-Linter]
+    needs: [Action-Linter, Docker-Linter]
   
   Security-Snyk:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/snyk.yml
-    needs: [PR-Title, Docker-Linter]
+    needs: [Action-Linter, Docker-Linter]
     secrets:
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
   
   Security-Prisma:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/PrismaCloud.yml
-    needs: [PR-Title, Docker-Linter]
+    needs: [Action-Linter, Docker-Linter]
     secrets:
-      PCC_CONSOLE_URL: ${{ secrets.PCC_CONSOLE_URL }}
-      PCC_USER: ${{ secrets.PCC_USER }}
-      PCC_PASS: ${{ secrets.PCC_PASS }}
+      pcc_console_url: ${{ secrets.PCC_CONSOLE_URL }}
+      pcc_user: ${{ secrets.PCC_USER }}
+      pcc_pass: ${{ secrets.PCC_PASS }}
   
   Docker-SBOM:
     if: github.event_name != 'opened'
