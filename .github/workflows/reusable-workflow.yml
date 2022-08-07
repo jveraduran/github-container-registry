@@ -35,14 +35,23 @@ jobs:
     secrets:
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
   
+  Security-Prisma:
+    if: github.event_name != 'opened'
+    uses: ./.github/workflows/PrismaCloud.yml
+    needs: [PR-Title, Docker-Linter]
+    secrets:
+      PCC_CONSOLE_URL: ${{ secrets.PCC_CONSOLE_URL }}
+      PCC_USER: ${{ secrets.PCC_USER }}
+      PCC_PASS: ${{ secrets.PCC_PASS }}
+  
   Docker-SBOM:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/docker-sbom.yml
-    needs: [Security-Anchore, Security-Snyk]
+    needs: [Security-Anchore, Security-Snyk, Security-Prisma]
   
   Registry:
     if: ${{ (github.event.release.action == 'released') && always() }}
     uses: ./.github/workflows/registry.yml
-    needs: [Docker-SBOM, Security-Anchore, Security-Snyk]
+    needs: [Docker-SBOM, Security-Anchore, Security-Snyk, Security-Prisma]
     secrets:
       PAT_GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
