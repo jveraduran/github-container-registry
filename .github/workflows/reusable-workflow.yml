@@ -1,0 +1,11 @@
+name: Github Container Registry
+on:
+  pull_request: 
+    branches: [develop, staging, master]
+    types: [opened, synchronize]
+  release:
+    types: [published]
+
+jobs:
+  Linter:
+    uses: ./.github/workflows/docker-linter.yml

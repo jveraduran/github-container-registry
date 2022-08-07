@@ -1,6 +1,6 @@
 name: Github Actions - Docker Linter
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   Docker-lint:
