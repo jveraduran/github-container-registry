@@ -14,6 +14,7 @@ jobs:
   PR-Title:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/pr-title.yml
+    needs: [Action-Linter]
     secrets:
       PAT_GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
 

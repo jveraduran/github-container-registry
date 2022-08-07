@@ -9,6 +9,7 @@ on:
 jobs:
   main:
     name: Validate PR title
+    if: github.event_name != 'opened'
     runs-on: ubuntu-latest
     steps:
       # Please look up the latest version from
