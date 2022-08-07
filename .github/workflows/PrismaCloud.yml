@@ -15,7 +15,7 @@ on:
 jobs:
   PrismaScan:
     env:
-      IMAGE_NAME: ${{ github.repository }}
+      IMAGE_NAME: prisma
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
