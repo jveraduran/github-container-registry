@@ -1,6 +1,10 @@
 name: Snyk Container
 on:
-  workflow_dispatch:
+  workflow_call:
+    secrets:
+      SNYK_TOKEN:
+        required: true
+        description: Snyk Token
     
 jobs:
   snyk:

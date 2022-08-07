@@ -15,3 +15,13 @@ jobs:
   Docker-Linter:
     uses: ./.github/workflows/docker-linter.yml
     needs: [PR-Title]
+
+  Security-Anchore:
+    uses: ./.github/workflows/anchore.yml
+    needs: [PR-Title, Docker-Linter]
+  
+  Security-Snyk:
+    uses: ./.github/workflows/snyk.yml
+    needs: [PR-Title, Docker-Linter]
+    secrets:
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

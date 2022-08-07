@@ -1,6 +1,6 @@
 name: Docker SBOM
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   Docker-sbom:
