@@ -1,0 +1,32 @@
+name: PrismaCloud Scan
+on:
+  workflow_call: 
+    secrets:
+      PCC_CONSOLE_URL:
+        description: "PrismaCloud Console URL"
+        required: true
+      PCC_USER:
+        required: true
+        description: "PrismaCloud API KEY"
+      PCC_PASS:
+        required: true
+        description: "PrismaCloud API TOKEN"
+    
+jobs:
+  PrismaScan:
+    env:
+      IMAGE_NAME: prisma
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build a Docker image
+      run: docker build . --tag $IMAGE_NAME
+
+    - name: Prisma Cloud image scan
+      id: scan
+      uses: PaloAltoNetworks/prisma-cloud-scan@v1
+      with:
+        pcc_console_url: ${{ secrets.PCC_CONSOLE_URL }}
+        pcc_user: ${{ secrets.PCC_USER }}
+        pcc_pass: ${{ secrets.PCC_PASS }}
+        image_name: ${{ env.IMAGE_NAME }} 
