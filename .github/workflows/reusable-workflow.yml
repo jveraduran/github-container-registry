@@ -39,3 +39,9 @@ jobs:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/docker-sbom.yml
     needs: [Security-Anchore, Security-Snyk]
+  
+  Registry:
+    if: ${{ (github.event.release.action == 'released') && always() }}
+    uses: ./.github/workflows/registry.yml
+    secrets:
+      PAT_GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
