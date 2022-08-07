@@ -1,8 +1,6 @@
 name: Anchore Analyze Container
 on:
-  pull_request: 
-    branches: [develop, staging, master]
-    types: [opened, synchronize]
+  workflow_dispatch:
     
 jobs:
   Anchore:
