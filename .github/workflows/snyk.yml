@@ -1,8 +1,10 @@
 name: Snyk Container
 on:
-  pull_request: 
-    branches: [develop, staging, master]
-    types: [opened, synchronize]
+  workflow_call:
+    secrets:
+      SNYK_TOKEN:
+        required: true
+        description: Snyk Token
     
 jobs:
   snyk:

@@ -1,8 +1,6 @@
 name: Docker SBOM
 on:
-  pull_request: 
-    branches: [develop, staging, master]
-    types: [opened, synchronize]
+  workflow_call:
 
 jobs:
   Docker-sbom:
