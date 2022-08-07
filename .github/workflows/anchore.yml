@@ -1,6 +1,6 @@
 name: Anchore Analyze Container
 on:
-  workflow_dispatch:
+  workflow_call:
     
 jobs:
   Anchore:
