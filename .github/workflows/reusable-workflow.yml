@@ -39,5 +39,3 @@ jobs:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/docker-sbom.yml
     needs: [Security-Anchore, Security-Snyk]
-    secrets:
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
