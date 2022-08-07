@@ -9,6 +9,8 @@ on:
 jobs:
   PR-Title:
     uses: ./.github/workflows/pr-title.yml
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
 
   Docker-Linter:
     uses: ./.github/workflows/docker-linter.yml
