@@ -11,6 +11,11 @@ jobs:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/action-linter.yml
 
+  Trufflehog:
+    if: github.event_name != 'opened'
+    uses: ./.github/workflows/trufflehog.yml
+    needs: [Action-Linter]
+
   Docker-Linter:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/docker-linter.yml
@@ -19,7 +24,7 @@ jobs:
   Security-Anchore:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/anchore.yml
-    needs: [Action-Linter, Docker-Linter]
+    needs: [Trufflehog, Action-Linter, Docker-Linter]
   
   Security-Snyk:
     if: github.event_name != 'opened'
