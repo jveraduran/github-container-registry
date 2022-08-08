@@ -19,14 +19,16 @@ The Container registry stores container images within your organization or perso
  <br>
 
 1. Setting your [access token](https://docs.github.com/en/packages/learn-github-packages/about-permissions-for-github-packages#about-scopes-and-permissions-for-package-registries), to enable GitHub functions like an OAuth access token and authenticates the access to the GitHub API. 
-<br>
+
+Select the ```read:packages``` scope to download container images and read their metadata.
+Select the ```write:packages``` scope to download and upload container images and read and write their metadata.
+Select the ```delete:packages``` scope to delete container images.
 
 2. Save your PAT. We recommend saving your PAT as an environment variable
    
     ```
     export CR_PAT=YOUR_TOKEN
     ```
-<br>
 
 3. Using the CLI for your container type, sign in to the Container registry service at ```ghcr.io```.
 
@@ -34,10 +36,8 @@ The Container registry stores container images within your organization or perso
     $ echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
     > Login Succeeded
     ```
- <br>
 
 ### Pushing container images
- <br>
 
 After you are logged in, you can now tag and push your Docker image to the GitHub Container Registry
 
