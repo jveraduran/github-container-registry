@@ -13,16 +13,16 @@
 
 The Container registry stores container images within your organization or personal account, and allows you to associate an image with a repository. You can choose whether to inherit permissions from a repository, or set granular permissions independently of a repository. You can also access public container images anonymously.
 
-<br>
 
 ### Authenticating to the Container registry
- <br>
 
 1. Setting your [access token](https://docs.github.com/en/packages/learn-github-packages/about-permissions-for-github-packages#about-scopes-and-permissions-for-package-registries), to enable GitHub functions like an OAuth access token and authenticates the access to the GitHub API. 
 
-Select the ```read:packages``` scope to download container images and read their metadata.
-Select the ```write:packages``` scope to download and upload container images and read and write their metadata.
-Select the ```delete:packages``` scope to delete container images.
+    + Select the ```read:packages``` scope to download container images and read their metadata.
+    
+    + Select the ```write:packages``` scope to download and upload container images and read and write their metadata.
+    
+    + Select the ```delete:packages``` scope to delete container images.
 
 2. Save your PAT. We recommend saving your PAT as an environment variable
    
