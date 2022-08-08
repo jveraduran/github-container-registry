@@ -15,7 +15,7 @@ on:
 jobs:
   PrismaScan:
     env:
-      IMAGE_NAME: prisma
+      IMAGE_NAME: testimage
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
