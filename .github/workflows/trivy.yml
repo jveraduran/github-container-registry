@@ -1,0 +1,25 @@
+name: Snyk Container
+on:
+  workflow_call:
+
+jobs:
+  build:
+    env:
+      IMAGE_NAME: testimage
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Build an image from Dockerfile
+        run: |
+          docker build . --tag $IMAGE_NAME
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: '$IMAGE_NAME'
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
