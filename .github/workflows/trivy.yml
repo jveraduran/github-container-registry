@@ -1,4 +1,4 @@
-name: Snyk Container
+name: Trivy Container
 on:
   workflow_call:
 
@@ -19,7 +19,7 @@ jobs:
         with:
           image-ref: ${{ env.IMAGE_NAME }}
           format: 'table'
-          exit-code: '1'
+          exit-code: '0'
           ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
