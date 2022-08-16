@@ -87,7 +87,7 @@ Helping out other users with their questions is an awesome way of contributing t
 
 **To help other folks out with their questions:**
 
-- Go to the [issue tracker](https://github.com/actions/setup-node/issues)
+- Go to the [issue tracker](https://github.com/jveraduran/github-container-registry/issues)
 - Read through the list until you find something that you're familiar enough with to answer to
 - Respond to the issue with whatever details are needed to clarify the question, or get more details about what's going on
 - Once the discussion wraps up and things are clarified, ask the original issue filer (or a maintainer) to close it for you
@@ -108,7 +108,7 @@ Another great way to contribute is to review pull request. Please, be extra kind
  
 **How to review:**
 
-- Go to the [pull requests](https://github.com/actions/setup-node/pulls)
+- Go to the [pull requests](https://github.com/jveraduran/github-container-registry/pulls)
 - Make sure you're familiar with the code or documentation is updated, unless it's a minor change (spellchecking, minor formatting, etc.)
 - Review changes using the GitHub functionality. You can ask a clarifying question, point out an error or suggest an alternative. 
 > Note: You may ask for minor changes - "nitpicks", but consider whether they are real blockers to merging or not
