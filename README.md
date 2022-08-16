@@ -53,7 +53,7 @@ After you are logged in, you can now tag and push your Docker image to the GitHu
     docker push ghcr.io/OWNER/IMAGE_NAME:TAG
     ```
 
-To discover every way to working with [Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) please generete and **ISSUE**.
+To discover every way to working with [Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) please generete and [**ISSUE**](https://github.com/jveraduran/github-container-registry/issues).
 
 <br>
 
