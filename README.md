@@ -157,6 +157,11 @@ jobs:
     secrets:
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
   
+  Security-Trivy:
+    if: github.event_name != 'opened'
+    uses: ./.github/workflows/trivy.yml
+    needs: [Trufflehog, Action-Linter, Docker-Linter]
+  
   Security-Prisma:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/PrismaCloud.yml
