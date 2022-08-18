@@ -1,10 +1,7 @@
 name: Create and publish a Docker image
 on:
-  workflow_call:
-    secrets:
-      PAT_GITHUB_TOKEN:
-        required: true
-        description: Github Token
+  release:
+    types: [published]
 
 env:
   REGISTRY: ghcr.io
