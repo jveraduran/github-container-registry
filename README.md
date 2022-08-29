@@ -4,6 +4,30 @@
 
 GitHub with GitHubActions and GHAS offer an incredible experience for developers around the planet. Just with a few considerations and good ideas we can build a wonderful experience for our development teams, and they just literally **stay focus on development**
 
+With GitHub Packages, you can safely publish and consume packages within your organization or with the entire world.
+
+### **Easy publishing** 
+<p> Use industry and community-standard package managers with native tooling commands. Then authenticate and publish directly to GitHub.
+<img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187101577-5042a584-65c0-40c3-96b5-5312deeba6b2.png" height="20"/>
+<img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187101798-0075567d-fc30-4b0c-b9eb-fb26121382e8.png" height="20"/>
+<img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187101908-3d597389-cc7a-43e2-b4b1-0cef947915aa.png" height="20"/>
+<img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187101966-0f3259f1-0134-4414-ab4f-ba9087cd18c8.png" height="20"/>
+<img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187102003-514489fb-6dec-445e-90de-6c498e779f46.png" height="20"/>
+<img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187102024-1ad5cf3a-16e9-4388-aed8-f36c9986135c.png" height="20"/>
+</p>
+
+### **Trusted sources** 
+Understand and safely install package contents. Get packages directly from the community on GitHub, and use only what’s been approved for your organization.
+
+### **Speed and security, native to GitHub**
+
+- **Use the same secure login for your code and packages:** Store your packages in the same secure environment as your source code, all protected by your GitHub credentials.
+
+- **Integrate packages with your workflows:** With a full API and webhooks support, you can extend your workflows to work with GitHub Packages.
+
+
+- **Get fast and reliable downloads via a global CDN:** GitHub Packages is built with the latest edge caching via a global CDN to deliver great performance, no matter where your builds run.
+
 ## Using Github Container Registry - Local Environment
 
 The Container registry stores container images within your organization or personal account, and allows you to associate an image with a repository. You can choose whether to inherit permissions from a repository, or set granular permissions independently of a repository. You can also access public container images anonymously.
