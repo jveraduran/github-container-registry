@@ -7,14 +7,14 @@ GitHub with GitHubActions and GHAS offer an incredible experience for developers
 With GitHub Packages, you can safely publish and consume packages within your organization or with the entire world.
 
 ### **Easy publishing** 
-<p> Use industry and community-standard package managers with native tooling commands. Then authenticate and publish directly to GitHub.
+Use industry and community-standard package managers with native tooling commands. Then authenticate and publish directly to GitHub.
 <img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187101577-5042a584-65c0-40c3-96b5-5312deeba6b2.png" height="20"/>
 <img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187101798-0075567d-fc30-4b0c-b9eb-fb26121382e8.png" height="20"/>
 <img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187101908-3d597389-cc7a-43e2-b4b1-0cef947915aa.png" height="20"/>
 <img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187101966-0f3259f1-0134-4414-ab4f-ba9087cd18c8.png" height="20"/>
 <img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187102003-514489fb-6dec-445e-90de-6c498e779f46.png" height="20"/>
 <img alt="Github Universe" src="https://user-images.githubusercontent.com/51175225/187102024-1ad5cf3a-16e9-4388-aed8-f36c9986135c.png" height="20"/>
-</p>
+
 
 ### **Trusted sources** 
 Understand and safely install package contents. Get packages directly from the community on GitHub, and use only what’s been approved for your organization.
