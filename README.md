@@ -207,7 +207,7 @@ Contributions are welcome! See [Contributor's Guide](./docs/contributors.md)
 
 ## Code of Conduct
 
-👋 Be nice. See our [code of conduct](./docs/code_of_conduct.md)
+👋 Be nice. See our [code of conduct](./docs/CODE_OF_CONDUCT.md)
 
 ## References
 
