@@ -2,9 +2,9 @@
 
 ## About this article
 
-GitHub with GitHubActions and GHAS offer an incredible experience for developers around the planet. Just with a few considerations and good ideas we can build a wonderful experience for our development teams, and they just literally **stay focus on development**
+[GitHub](https://github.com/features) with [GitHubActions](https://github.com/features/actions) and [GitHub Advanced Security](https://docs.github.com/es/get-started/learning-about-github/about-github-advanced-security) offer an incredible experience for developers around the planet. Just with a few considerations and good ideas we can build a wonderful experience for our development teams, and they just literally **stay focus on development**
 
-With GitHub Packages, you can safely publish and consume packages within your organization or with the entire world.
+With [GitHub Packages](https://github.com/features/packages), you can safely publish and consume packages within your organization or with the entire world.
 
 ### **Easy publishing** 
 Use industry and community-standard package managers with native tooling commands. Then authenticate and publish directly to GitHub.
