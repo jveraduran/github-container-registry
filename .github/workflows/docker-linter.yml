@@ -9,7 +9,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: lint
-      uses: ghe-actions/dockerfile-validator@v1
+      uses: ghe-actions/dockerfile-validator@v2
       with:
         dockerfile: 'Dockerfile'
         lint: 'dockerlint'
