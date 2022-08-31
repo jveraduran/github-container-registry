@@ -132,7 +132,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 ```
 
-Para habilitar más capacidades y demostrar lo más potente de Github y Github Actions, complementamos este ejemplo con [Github Reusable Workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) usando herramientas Open Source y Enterprise Tools mediante GitHub Actions.
+Para habilitar más capacidades y demostrar lo más potente de Github y Github Actions, complementamos este ejemplo con [Github Reusable Workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) usando herramientas Open Source y Pagadas (Licenciadas) mediante GitHub Actions.
 
 La reutilización de workflows evita la duplicación. Esto hace que los workflow sean más fáciles de mantener y te permiten crear nuevos workflow más rápidamente basándose en el trabajo de otros, tal como lo hace con las acciones. La reutilización de workflows también promueve las mejores prácticas ayudándote a usar workflows que están bien diseñados, ya se han probado y se ha demostrado que son efectivos. Tu organización puede crear una biblioteca de workflows reutilizables que se pueden mantener de forma centralizada.
 
