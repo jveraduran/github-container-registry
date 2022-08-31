@@ -81,7 +81,7 @@ To discover every way to working with [Container Registry](https://docs.github.c
 
 <br>
 
-## Using Github Container Registry - Github Action
+## Using Github Container Registry - Github Actions
 <br>
 
 In a single workflow, you can publish your Docker image to multiple registries by using the ```login-action``` and `build-push-action` actions for each registry.
