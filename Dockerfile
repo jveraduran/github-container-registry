@@ -1,6 +1,6 @@
 FROM node:18-alpine3.16
 
-RUN apk add --no-cache curl=7.83.1-r2 && \
+RUN apk add --no-cache curl=7.83.1-r3 && \
     wget=1.21.3-r0 && \
     go=1.18.5-r0 && \
     git=2.36.2-r0 && \
