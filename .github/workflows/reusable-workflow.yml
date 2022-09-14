@@ -35,15 +35,6 @@ jobs:
     if: github.event_name != 'opened'
     uses: ./.github/workflows/trivy.yml
     needs: [Trufflehog, Action-Linter, Docker-Linter]
-
-  Security-Prisma:
-    if: github.event_name != 'opened'
-    uses: ./.github/workflows/PrismaCloud.yml
-    needs: [Trufflehog, Action-Linter, Docker-Linter]
-    secrets:
-      pcc_console_url: ${{ secrets.PCC_CONSOLE_URL }}
-      pcc_user: ${{ secrets.PCC_USER }}
-      pcc_pass: ${{ secrets.PCC_PASS }}
   
   Docker-SBOM:
     if: github.event_name != 'opened'
