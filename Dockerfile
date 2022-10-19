@@ -1,4 +1,4 @@
-FROM node:18-alpine3.16
+FROM node:19-alpine3.16
 
 RUN apk add --no-cache curl=7.83.1-r3 && \
     wget=1.21.3-r0 && \
